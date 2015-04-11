@@ -15,6 +15,8 @@ BuildRequires:	automake
 Requires:	gtk-murrine-engine >= 0.98.1.1
 Requires:	gtk3 >= 3.14.0
 
+BuildRequires:	git
+
 BuildArch:	noarch
 
 %description
