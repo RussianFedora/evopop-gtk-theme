@@ -1,8 +1,8 @@
-%global daterev	20150511gitf4cf8b
+%global daterev	20150604git9767c3
 
 Name:		evopop-gtk-theme
 Version:	0.27
-Release:	0.1.%{?daterev}%{?dist}
+Release:	0.2.%{?daterev}%{?dist}
 Summary:	EvoPop GTK theme for Gnome
 Group:		User Interface/Desktops
 
@@ -42,6 +42,9 @@ cp -f %{buildroot}%{_datadir}/themes/evopop-light-gtk-theme/gtk-2.0/gtkrc \
 %{_datadir}/themes/evopop*
 
 %changelog
+* Wed Jul 15 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 0.27-0.2.20150604git9767c3.R
+- update to last snapshot
+
 * Wed May 13 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 0.23-0.1.20150511gitf4cf8b.R
 - update to last snapshot 20150511gitf4cf8b
 
