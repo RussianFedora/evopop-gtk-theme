@@ -2,13 +2,14 @@
 
 Name:		evopop-gtk-theme
 Version:	0.27
-Release:	0.2.%{?daterev}%{?dist}
+Release:	0.3.%{?daterev}%{?dist}
 Summary:	EvoPop GTK theme for Gnome
 Group:		User Interface/Desktops
 
 License:	GPLv3
 URL:		https://github.com/solus-project
 Source0:	%{name}-%{version}-%{?daterev}.tar.xz
+Patch0:		evopop-gtk-theme-0.27-black-chrome.patch
 
 BuildRequires:	automake
 
@@ -25,6 +26,7 @@ EvoPop is the official GTK theme for Ozon OS.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 ./autogen.sh
@@ -42,6 +44,9 @@ cp -f %{buildroot}%{_datadir}/themes/evopop-light-gtk-theme/gtk-2.0/gtkrc \
 %{_datadir}/themes/evopop*
 
 %changelog
+* Wed Sep  2 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 0.27-0.3.20150604git9767c3.R
+- adjust black theme to Chrome browser
+
 * Wed Jul 15 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 0.27-0.2.20150604git9767c3.R
 - update to last snapshot
 
