@@ -4,7 +4,8 @@ NAME=$(rpm -q --specfile *.spec --qf "%{name}")
 VERSION=$(rpm -q --specfile *.spec --qf "%{version}")
 
 rm -rf $NAME-$VERSION
-git clone git://github.com/solus-project/$NAME.git $NAME-$VERSION
+#git clone git://github.com/solus-project/$NAME.git $NAME-$VERSION
+git clone git://github.com/fdinardo/$NAME.git $NAME-$VERSION
 
 cd $NAME-$VERSION
 DATE=$(git log -1 --date=iso | awk '/Date:/ { print $2 }' | sed 's@-@@g')
