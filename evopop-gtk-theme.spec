@@ -2,7 +2,7 @@
 
 Name:		evopop-gtk-theme
 Version:	0.29
-Release:	0.1.%{?daterev}%{?dist}
+Release:	0.2.%{?daterev}%{?dist}
 Summary:	EvoPop GTK theme for Gnome
 Group:		User Interface/Desktops
 
@@ -31,8 +31,8 @@ EvoPop is the official GTK theme for Ozon OS.
 
 %install
 %{make_install}
-cp -f %{buildroot}%{_datadir}/themes/evopop-light-gtk-theme/gtk-2.0/gtkrc \
-	%{buildroot}%{_datadir}/themes/evopop-gtk-theme/gtk-2.0/gtkrc
+#cp -f %{buildroot}%{_datadir}/themes/evopop-light-gtk-theme/gtk-2.0/gtkrc \
+#	%{buildroot}%{_datadir}/themes/evopop-gtk-theme/gtk-2.0/gtkrc
 
 rm -rf %{buildroot}%{_datadir}/themes/evopop-light-gtk-theme
 
@@ -44,6 +44,9 @@ rm -rf %{buildroot}%{_datadir}/themes/evopop-light-gtk-theme
 %{_datadir}/themes/evopop*
 
 %changelog
+* Fri Nov 13 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 0.29 0.2.20151028git248234.R
+- do not use gtkrc from light theme
+
 * Fri Oct 30 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 0.29 0.1.20151028git248234.R
 - rebase on https://github.com/fdinardo/evopop-gtk-theme git
 - drop light theme
