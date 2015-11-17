@@ -1,14 +1,15 @@
-%global daterev	20151028git248234
+%global daterev	20151114git8d0f4d
 
 Name:		evopop-gtk-theme
 Version:	0.29
-Release:	0.2.%{?daterev}%{?dist}
+Release:	0.3.%{?daterev}%{?dist}
 Summary:	EvoPop GTK theme for Gnome
 Group:		User Interface/Desktops
 
 License:	GPLv3
 URL:		https://github.com/fdinardo/evopop-gtk-theme
 Source0:	%{name}-%{version}-%{?daterev}.tar.xz
+Patch0:		%{name}-0.29-more-padding.patch
 
 BuildRequires:	automake
 
@@ -25,14 +26,13 @@ EvoPop is the official GTK theme for Ozon OS.
 
 %prep
 %setup -q
+%patch0 -p1 -b. more-padding
 
 %build
 ./autogen.sh
 
 %install
 %{make_install}
-#cp -f %{buildroot}%{_datadir}/themes/evopop-light-gtk-theme/gtk-2.0/gtkrc \
-#	%{buildroot}%{_datadir}/themes/evopop-gtk-theme/gtk-2.0/gtkrc
 
 rm -rf %{buildroot}%{_datadir}/themes/evopop-light-gtk-theme
 
@@ -44,6 +44,10 @@ rm -rf %{buildroot}%{_datadir}/themes/evopop-light-gtk-theme
 %{_datadir}/themes/evopop*
 
 %changelog
+* Tue Nov 17 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 0.29 0.3.20151028git8d0f4d.R
+- update to last snapshot
+- increase padding in Nautilus
+
 * Fri Nov 13 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 0.29 0.2.20151028git248234.R
 - do not use gtkrc from light theme
 
