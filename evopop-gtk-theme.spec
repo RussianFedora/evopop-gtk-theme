@@ -1,8 +1,8 @@
-%global daterev	20151114git8d0f4d
+%global daterev	20151120gitdbcd65
 
 Name:		evopop-gtk-theme
 Version:	0.29
-Release:	0.3.%{?daterev}%{?dist}
+Release:	0.4.%{?daterev}%{?dist}
 Summary:	EvoPop GTK theme for Gnome
 Group:		User Interface/Desktops
 
@@ -44,6 +44,9 @@ rm -rf %{buildroot}%{_datadir}/themes/evopop-light-gtk-theme
 %{_datadir}/themes/evopop*
 
 %changelog
+* Tue Nov 24 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 0.29 0.4.20151120gitdc603c.R
+- update to last snapshot
+
 * Tue Nov 17 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 0.29 0.3.20151028git8d0f4d.R
 - update to last snapshot
 - increase padding in Nautilus
