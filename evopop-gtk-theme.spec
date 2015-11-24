@@ -1,4 +1,4 @@
-%global daterev	20151120gitdbcd65
+%global daterev	20151120gitdc603c
 
 Name:		evopop-gtk-theme
 Version:	0.29
