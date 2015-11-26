@@ -14,7 +14,7 @@ Patch0:		%{name}-0.29-more-padding.patch
 BuildRequires:	automake
 
 Requires:	gtk-murrine-engine >= 0.98.1.1
-Requires:	gtk3 >= 3.14.0
+Requires:	gtk3 >= 3.18.5
 
 BuildRequires:	git
 
