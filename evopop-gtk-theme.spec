@@ -1,15 +1,14 @@
 %global daterev	20151120gitdc603c
 
 Name:		evopop-gtk-theme
-Version:	0.29
-Release:	0.4.%{?daterev}%{?dist}
+Version:	1.4
+Release:	1%{?dist}
 Summary:	EvoPop GTK theme for Gnome
 Group:		User Interface/Desktops
 
 License:	GPLv3
 URL:		https://github.com/fdinardo/evopop-gtk-theme
-Source0:	%{name}-%{version}-%{?daterev}.tar.xz
-Patch0:		%{name}-0.29-more-padding.patch
+Source0:	https://github.com/solus-cold-storage/evopop-gtk-theme/archive/%{version}.tar.gz
 
 BuildRequires:	automake
 
@@ -26,7 +25,7 @@ EvoPop is the official GTK theme for Ozon OS.
 
 %prep
 %setup -q
-%patch0 -p1 -b .more-padding
+chmod 644 AUTHORS README.md LICENSE
 
 %build
 ./autogen.sh
@@ -34,16 +33,29 @@ EvoPop is the official GTK theme for Ozon OS.
 %install
 %{make_install}
 
-rm -rf %{buildroot}%{_datadir}/themes/evopop-light-gtk-theme
+%if 0%{?fedora} > 23
+rm -rf %{buildroot}%{_datadir}/themes/EvoPop/gtk-3.0
+mv %{buildroot}%{_datadir}/themes/EvoPop/gtk-3.20 \
+    %{buildroot}%{_datadir}/themes/EvoPop/gtk-3.0
+%endif
 
+%if 0%{?fedora} < 24
+rm -rf %{buildroot}%{_datadir}/themes/EvoPop/gtk-3.20
+%endif
+
+find %{buildroot}%{_datadir}/themes/EvoPop -type f -exec chmod 644 {} \;
+find %{buildroot}%{_datadir}/themes/EvoPop -type d -exec chmod 755 {} \;
 
 %files
 %defattr(-,root,root)
-%doc CREDITS README.md
+%doc AUTHORS README.md
 %license LICENSE
-%{_datadir}/themes/evopop*
+%{_datadir}/themes/EvoPop
 
 %changelog
+* Wed Jun 15 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 1.4-1.R
+- update to 1.4
+
 * Tue Nov 24 2015 Arkady L. Shane <ashejn@russianfedora.ru> - 0.29 0.4.20151120gitdc603c.R
 - update to last snapshot
 
