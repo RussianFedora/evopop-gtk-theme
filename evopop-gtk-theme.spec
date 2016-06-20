@@ -1,12 +1,12 @@
 Name:		evopop-gtk-theme
-Version:	1.4.2
+Version:	1.5.0
 Release:	1%{?dist}
 Summary:	EvoPop GTK theme for Gnome
 Group:		User Interface/Desktops
 
 License:	GPLv3
 URL:		https://github.com/fdinardo/evopop-gtk-theme
-Source0:	https://github.com/solus-cold-storage/evopop-gtk-theme/archive/%{version}.tar.gz
+Source0:	https://github.com/solus-cold-storage/%{name}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:	automake
 
@@ -51,6 +51,13 @@ find %{buildroot}%{_datadir}/themes/EvoPop -type d -exec chmod 755 {} \;
 %{_datadir}/themes/EvoPop
 
 %changelog
+* Mon Jun 20 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 1.5.0-1.R
+- Total rewrite from Adwaita
+- improved level / progressbars
+- Improved scales
+- Minor tweaks to Budgie theming
+- Tweaked spinbuttons
+
 * Thu Jun 16 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 1.4.2-1.R
 - gtk 3.18/3.20 bugfix release
 
