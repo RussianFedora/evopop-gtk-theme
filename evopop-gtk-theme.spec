@@ -1,5 +1,5 @@
 Name:		evopop-gtk-theme
-Version:	1.5.0
+Version:	1.6.1
 Release:	1%{?dist}
 Summary:	EvoPop GTK theme for Gnome
 Group:		User Interface/Desktops
@@ -51,6 +51,17 @@ find %{buildroot}%{_datadir}/themes/EvoPop -type d -exec chmod 755 {} \;
 %{_datadir}/themes/EvoPop
 
 %changelog
+* Tue Jun 28 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 1.6.1-1.R
+- update to 1.6.1
+- Fixed Raven black background.
+- Improved tiled & maximized headerbars
+- Gtk 3.18
+  Total rewrite from Adwaita
+  improved level / progressbars
+  Improved scales
+  Minor tweaks to Budgie theming
+  Tweaked spinbuttons
+
 * Mon Jun 20 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 1.5.0-1.R
 - Total rewrite from Adwaita
 - improved level / progressbars
