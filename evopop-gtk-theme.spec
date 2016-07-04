@@ -26,7 +26,8 @@ EvoPop is the official GTK theme for Ozon OS.
 chmod 644 AUTHORS README.md LICENSE
 
 %build
-./autogen.sh
+autoreconf --force --install --symlink --warnings=all
+%configure
 
 %install
 %{make_install}
