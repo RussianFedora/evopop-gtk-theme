@@ -5,7 +5,7 @@ Summary:	EvoPop GTK theme for Gnome
 Group:		User Interface/Desktops
 
 License:	GPLv3
-URL:		https://github.com/fdinardo/evopop-gtk-theme
+URL:		https://github.com/solus-cold-storage/evopop-gtk-theme
 Source0:	https://github.com/solus-cold-storage/%{name}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:	automake
