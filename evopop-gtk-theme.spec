@@ -1,5 +1,5 @@
 Name:		evopop-gtk-theme
-Version:	1.7.3
+Version:	2.0.0
 Release:	1%{?dist}
 Summary:	EvoPop GTK theme for Gnome
 Group:		User Interface/Desktops
@@ -52,6 +52,9 @@ find %{buildroot}%{_datadir}/themes/EvoPop -type d -exec chmod 755 {} \;
 %{_datadir}/themes/EvoPop
 
 %changelog
+* Mon Oct 17 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 2.0.0-1
+- update to 2.0.0
+
 * Tue Aug  2 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 1.7.3-1
 - update to 1.7.3
 
