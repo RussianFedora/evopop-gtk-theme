@@ -1,5 +1,5 @@
 Name:		evopop-gtk-theme
-Version:	2.0.4
+Version:	2.1.1
 Release:	1%{?dist}
 Summary:	EvoPop GTK theme for Gnome
 Group:		User Interface/Desktops
@@ -32,16 +32,6 @@ autoreconf --force --install --symlink --warnings=all
 %install
 %{make_install}
 
-%if 0%{?fedora} > 23
-rm -rf %{buildroot}%{_datadir}/themes/EvoPop/gtk-3.0
-mv %{buildroot}%{_datadir}/themes/EvoPop/gtk-3.20 \
-    %{buildroot}%{_datadir}/themes/EvoPop/gtk-3.0
-%endif
-
-%if 0%{?fedora} < 24
-rm -rf %{buildroot}%{_datadir}/themes/EvoPop/gtk-3.20
-%endif
-
 find %{buildroot}%{_datadir}/themes/EvoPop -type f -exec chmod 644 {} \;
 find %{buildroot}%{_datadir}/themes/EvoPop -type d -exec chmod 755 {} \;
 
@@ -52,6 +42,9 @@ find %{buildroot}%{_datadir}/themes/EvoPop -type d -exec chmod 755 {} \;
 %{_datadir}/themes/EvoPop
 
 %changelog
+* Mon Jun 26 2017 Arkady L. Shane <ashejn@russianfedora.ru> - 2.1.1-1
+- update to 2.1.1
+
 * Thu Oct 27 2016 Arkady L. Shane <ashejn@russianfedora.ru> - 2.0.4-1
 - update to 2.0.4
 
